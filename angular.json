@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "decor",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -31,8 +31,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -99,6 +106,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []

@@ -1,0 +1,19 @@
+@import 'index.scss';
+header {
+    background: linear-gradient(to right,$header-bg, $black);
+    // background-color: ;
+    height: calc(10% - 30px);
+    color: $white;
+    padding: $spacing-sm $spacing-md * 2;
+    .call-details {
+        width: 80%;
+        span {
+            padding-left: $spacing-sm;
+            font-weight: 500;
+        }
+    }
+    i{
+        padding-right: $spacing-sm;
+        cursor: pointer;
+    }
+}
