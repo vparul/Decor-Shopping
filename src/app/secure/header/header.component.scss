@@ -1,18 +1,43 @@
-@import 'index.scss';
+@import "index.scss";
 header {
-    background: linear-gradient(to right,$header-bg, $black);
-    height: calc(50% - 30px);
-    color: $white;
-    padding: $spacing-sm $spacing-md * 2;
-    .call-details {
-        width: 80%;
-        span {
-            padding-left: $spacing-sm;
-            font-weight: 500;
-        }
+  background: url("../../../assets/images/banner_1.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, $black, $black);
+    opacity: 0.6;
+  }
+  .navbar-container {
+    position: absolute;
+    width: 80%;
+    padding: $spacing-xl 0;
+    button {
+        color: $white;
     }
-    i{
-        padding-right: $spacing-sm;
-        cursor: pointer;
+    .icons-container {
+        color: $white;
+        font-size: 1rem;
     }
+  }
+  .logo {
+    flex-basis: 20%;
+    max-width: 200px;
+  }
+  .options {
+    flex-basis:72%;
+    padding: 0 $spacing-md;
+    button {
+        max-width: 200px;
+        min-width: 100px;
+        font-size: 1rem;
+    }
+}
 }

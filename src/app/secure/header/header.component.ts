@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { buddhaDropDownMenu, decorDropDownMenu, giftingDropDownMenu, hinduGodsDropDownMenu, utilitiesDropDownMenu } from 'src/app/shared/shared-constants';
 
 @Component({
@@ -7,9 +8,8 @@ import { buddhaDropDownMenu, decorDropDownMenu, giftingDropDownMenu, hinduGodsDr
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
- 
+ @ViewChild(MatMenuTrigger,{static: false}) menu: MatMenuTrigger;
 
-  
   dropdownMenu = [
     {
       title:'Hindu Gods',
@@ -59,4 +59,8 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  closeMenu() {
+    this.menu.closeMenu();
+  }
 }

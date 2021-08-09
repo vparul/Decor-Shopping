@@ -1,32 +1,32 @@
-
 <header class="flex column justify-between items-center">
-    <section class="flex justify-between items-center w-100">
-        <div class="call-details">
-            <i class="fa fa-phone"></i>
-            <span>9990001234</span>
-        </div>
-        <div class="social-media-details flex justify-between flex-1">
-            <i class="fa fa-facebook-f"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-linkedin"></i>
-            <i class="fa fa-pinterest"></i>
-        </div>
-    </section>
-    <section>
-        <div>
-            <!-- <img src="../../../assets/images/logo.png"> -->
-            
-            <ng-container *ngFor="let menuItem of dropdownMenu">
-                <button mat-icon-button [matMenuTriggerFor]="menu">
-                   {{menuItem.title}}
-                  </button>
-                  <mat-menu #menu="matMenu">
-                    <button *ngFor="let item of menuItem.subMenu.list" mat-menu-item>
-                      <span>{{item}}</span>
+    <section class="flex justify-between items-center w-100"></section>
+    <section class="navbar-container flex">
+        <img src="../../../assets/images/logo.png" class="logo" />
+        <div class="flex items-center justify-between w-100 options">
+            <div class="flex items-center justify-center w-100">
+                <ng-container *ngFor="let menuItem of dropdownMenu">
+                    <button *ngIf="menuItem.subMenu.list.length" mat-icon-button [matMenuTriggerFor]="menu"
+                        #trigger="matMenuTrigger" (mouseover)="trigger.openMenu()">
+                        {{ menuItem.title }}
                     </button>
-                  </mat-menu>
-            </ng-container>
+                    <mat-menu #menu="matMenu">
+                        <button *ngFor="let item of menuItem.subMenu.list" mat-menu-item>
+                            <span>{{ item }}</span>
+                        </button>
+                    </mat-menu>
+
+                    <button *ngIf="!menuItem.subMenu.list.length" mat-icon-button>
+                        {{ menuItem.title }}
+                    </button>
+                    
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="icons-container flex flex-1 items-center justify-between">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-shopping-cart" matBadge="0" matBadgeOverlap="false"></i>
         </div>
     </section>
 </header>
