@@ -10,7 +10,7 @@
                         {{ menuItem.title }}
                     </button>
                     <mat-menu #menu="matMenu">
-                        <button *ngFor="let item of menuItem.subMenu.list" mat-menu-item>
+                        <button *ngFor="let item of menuItem.subMenu.list" mat-menu-item class="dropdown-option">
                             <span>{{ item }}</span>
                         </button>
                     </mat-menu>
