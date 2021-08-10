@@ -1,0 +1,46 @@
+<footer class="w-100">
+  <section class="footer-container pb-2 pt-2">
+    <section class="flex justify-between items-center ml-7 mr-7">
+      <div class="company-info">
+        <img src="../../../assets/images/logo.png" class="logo" />
+        <h6 class="cursor-pointer">
+          There are many variations of passages of look even slightly believable
+        </h6>
+        <div class="flex social-media-icons justify-between">
+          <span
+            ><i
+              class="fa fa-facebook flex items-center justify-center h-100"
+            ></i
+          ></span>
+          <span
+            ><i class="fa fa-twitter flex items-center justify-center h-100"></i
+          ></span>
+          <span
+            ><i
+              class="fa fa-youtube-play flex items-center justify-center h-100"
+            ></i
+          ></span>
+          <span
+            ><i
+              class="fa fa-instagram flex items-center justify-center h-100"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div *ngFor="let info of infoSections" class="footer-options flex column">
+        <h2>{{ info.heading }}</h2>
+        <ng-container *ngFor="let subInfo of info.subHeadings">
+          <i class="{{ subInfo.icon }}">
+            <span [ngClass]="{ 'ml-half': subInfo.icon }">{{
+              subInfo.name
+            }}</span></i
+          >
+        </ng-container>
+      </div>
+    </section>
+  </section>
+
+  <section class="flex justify-between items-center ml-7 mr-7 copy-rights">
+    <h6 class="m-0">Powered by NeoClassic © 2021</h6>
+  </section>
+</footer>

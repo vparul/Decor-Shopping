@@ -1,0 +1,96 @@
+@import "index.scss";
+.hover-effect {
+  border-radius: 50%;
+  color: $white;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: $black;
+  color: $white;
+  max-height: 500px;
+  .footer-container {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .company-info {
+    flex-basis: 25%;
+    img {
+      height: 100px;
+      width: 200px;
+      margin-bottom: $spacing-lg;
+    }
+    h6 {
+      color: $light-grey;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: 28px;
+      margin-bottom: $spacing-lg;
+    }
+  }
+  .social-media-icons {
+    width: 50%;
+    span {
+      width: 30px;
+      height: 30px;
+      background: $light-grey;
+      @extend .hover-effect;
+      .fa-facebook:hover {
+        background-color: $fb;
+        @extend .hover-effect;
+      }
+      .fa-twitter:hover {
+        @extend .hover-effect;
+        background-color: $twitter;
+      }
+      .fa-youtube-play:hover {
+        background-color: $you-tube;
+        @extend .hover-effect;
+      }
+      .fa-instagram:hover {
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        @extend .hover-effect;
+      }
+    }
+  }
+  .footer-options {
+    flex-basis: 18%;
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 5px !important;
+    }
+
+    i {
+      font-style: normal;
+      display: block;
+      font-size: 13px;
+      color: $light-grey;
+      line-height: 26px;
+      color: $white;
+      margin-bottom: 5px !important;
+      span {
+        color: $light-grey;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  .copy-rights {
+    padding: $spacing-sm 0;
+    h6 {
+      font-size: 12px;
+    }
+  }
+}
+.ml-half {
+  margin-left: 0.5rem;
+}
