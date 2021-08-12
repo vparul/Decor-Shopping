@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IntroductionComponent } from 'src/app/secure/introduction/introduction.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     TopCategoriesComponent,
+    IntroductionComponent
   ],
   imports: [RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule],

@@ -23,7 +23,7 @@ header {
         color: $white;
         cursor: pointer;
         &:hover {
-          color: $light-grey;
+          color: $grey;
 
         }
     }
@@ -51,7 +51,7 @@ header {
   font-size: 1rem;
   font-weight: 500;
   &:hover {
-    color: $light-grey;
+    color: $grey;
     cursor: pointer;
   }
 }

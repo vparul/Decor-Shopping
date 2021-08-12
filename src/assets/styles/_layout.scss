@@ -63,3 +63,38 @@ $space-amounts: (0, 1, 2, 3, 4, 5, 6, 7, 8);
 .cursor-pointer {
   cursor: pointer;
 }
+
+.font-light-bold {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+.font-bolder {
+  font-weight: bolder;
+}
+
+.page-content {
+  padding: 20px 0;
+  .read-more-btn {
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    max-width: 150px;
+    min-width: 100px;
+    font-size: 0.9rem;
+    padding: 2px 20px;
+    &:hover {
+      background-color: #e6e6e6;
+      transition: all 0.5s ease;
+      color: #000;
+    }
+  }
+}
+.small-letter-space {
+  letter-spacing: 0.8px;
+}
+.mid-letter-space {
+  letter-spacing: 1.5px;
+}

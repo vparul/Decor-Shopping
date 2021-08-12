@@ -8,7 +8,7 @@ footer {
   color: $white;
   max-height: 500px;
   .footer-container {
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid $grey;
   }
 
   .company-info {
@@ -19,7 +19,7 @@ footer {
       margin-bottom: $spacing-lg;
     }
     h6 {
-      color: $light-grey;
+      color: $grey;
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.5px;
@@ -32,7 +32,7 @@ footer {
     span {
       width: 30px;
       height: 30px;
-      background: $light-grey;
+      background: $grey;
       @extend .hover-effect;
       .fa-facebook:hover {
         background-color: $fb;
@@ -70,12 +70,12 @@ footer {
       font-style: normal;
       display: block;
       font-size: 13px;
-      color: $light-grey;
+      color: $grey;
       line-height: 26px;
       color: $white;
       margin-bottom: 5px !important;
       span {
-        color: $light-grey;
+        color: $grey;
         &:hover {
           color: $white;
         }

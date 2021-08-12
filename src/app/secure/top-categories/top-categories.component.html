@@ -1,6 +1,6 @@
-<section class="m-2 page-content">
-  <h1 class="heading mt-3 mb-2">Top Categories</h1>
-  <div class="images-container flex pl-2 pr-2">
+<section class="page-content">
+  <h1 class="heading mb-2">Top Categories</h1>
+  <div class="images-container flex">
     <div class="images-subcontainer flex column" *ngFor="let image of images">
       <h6 class="pb-1">{{ image.name }}</h6>
       <img src="{{ image?.path }}" alt="{{ image?.name }}" />
