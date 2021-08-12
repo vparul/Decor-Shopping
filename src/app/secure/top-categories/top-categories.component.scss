@@ -16,6 +16,12 @@ $border-width: 1.2rem;
       border-style: solid;
       &:last-child {
         border-width: $border-width $border-width $border-width $border-width !important;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      &:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
       }
       &:hover {
         img {
