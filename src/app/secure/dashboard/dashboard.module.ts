@@ -4,6 +4,7 @@ import { IntroductionComponent } from 'src/app/secure/introduction/introduction.
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { ProductListComponent } from '../product-list/product-list.component';
 import { TopCategoriesComponent } from '../top-categories/top-categories.component';
 import { DashboardComponent } from './dashboard.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     TopCategoriesComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    ProductListComponent
   ],
   imports: [RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule],
