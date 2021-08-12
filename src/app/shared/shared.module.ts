@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 
@@ -10,11 +11,15 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     MaterialModule,
-    BrowserModule
+    BrowserModule,
+    IvyCarouselModule
+
   ],
   exports:[
     MaterialModule,
-    BrowserModule
+    BrowserModule,
+    IvyCarouselModule
+
   ]
 })
 export class SharedModule { }

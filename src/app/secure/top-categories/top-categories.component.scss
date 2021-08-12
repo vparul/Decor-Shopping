@@ -1,0 +1,48 @@
+@import "index";
+$border-width: 1.2rem;
+.page-content {
+  h6 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .images-container {
+    .images-subcontainer {
+      flex-basis: 33%;
+      padding: $spacing-xxl;
+      border-width: $border-width 0 $border-width $border-width;
+      border-color: $light-grey;
+      border-style: solid;
+      &:last-child {
+        border-width: $border-width $border-width $border-width $border-width !important;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .heading {
+    font: 700 30px/28px "Roboto", sans-serif;
+    text-align: center;
+    position: relative;
+    color: $black;
+    &:after {
+      border-bottom: 3px solid $light-grey;
+      content: "";
+      display: block;
+      margin-left: 0;
+      text-align: center;
+      margin: $spacing-md auto 0px;
+      width: 60px;
+      transition: all 0.5s ease 0s;
+    }
+    &:hover:after {
+      width: 100px;
+    }
+  }
+}
