@@ -1,0 +1,14 @@
+@import 'index';
+.page-content {
+    .product-container {
+        flex-basis: calc(100% / 4);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div {
+            img:hover {
+                transform: scale(1.1);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

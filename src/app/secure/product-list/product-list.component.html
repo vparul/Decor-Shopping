@@ -1,3 +1,11 @@
 <div class="page-content">
     <decor-animated-heading [heading]="'Featured Products'"></decor-animated-heading>
+    <div class="flex product-container">
+        <div *ngFor="let product of featuredProducts; let i=index">
+            <img src="{{product.url}}" alt="{{product.name}}">
+            <h4 class="mt-1 mb-0">{{product.name}}</h4>
+            <h5 class="font-bold">{{product.price}}</h5>
+        </div>
+    </div>
+   
 </div>
