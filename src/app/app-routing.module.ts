@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardModule } from './secure/dashboard/dashboard.module';
+import { SharedModule } from './shared/shared.module';
 
 const routes: Routes = [
   {
@@ -10,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [DashboardModule,RouterModule.forRoot(routes)],
+  imports: [DashboardModule,RouterModule.forRoot(routes), SharedModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

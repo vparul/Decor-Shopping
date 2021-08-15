@@ -31,24 +31,4 @@ $border-width: 1.2rem;
       }
     }
   }
-
-  .heading {
-    font: 700 30px/28px "Roboto", sans-serif;
-    text-align: center;
-    position: relative;
-    color: $black;
-    &:after {
-      border-bottom: 3px solid $grey;
-      content: "";
-      display: block;
-      margin-left: 0;
-      text-align: center;
-      margin: $spacing-md auto 0px;
-      width: 60px;
-      transition: all 0.5s ease 0s;
-    }
-    &:hover:after {
-      width: 100px;
-    }
-  }
 }
