@@ -1,1 +1,16 @@
-@import 'index';
+@import "index";
+.scroll-to-top-btn {
+  position: absolute;
+  background-color: $grey;
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  position: fixed;
+  bottom: 30px;
+  i {
+    color: white;
+    font-size: 1rem;
+  }
+}

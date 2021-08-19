@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'decor-dashboard',
@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  
+  showScrollToTopButton: boolean = false;
 
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    if (document.documentElement.scrollTop > 100) {
+      this.showScrollToTopButton = true;
+    }
+    else {
+      this.showScrollToTopButton = false;
+    }
+  }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  scrollToTop() {
+    document.documentElement.scrollTop = 0;
   }
 
 }
