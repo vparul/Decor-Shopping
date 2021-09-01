@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { buddhaDropDownMenu, decorDropDownMenu, giftingDropDownMenu, hinduGodsDropDownMenu, utilitiesDropDownMenu } from 'src/app/shared/shared-constants';
 
@@ -8,6 +8,13 @@ import { buddhaDropDownMenu, decorDropDownMenu, giftingDropDownMenu, hinduGodsDr
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  showMenu: boolean = false;
+  showMenuOnResize: boolean = false
+  @HostListener('window:resize',['$event'])
+    onResize($event:any) {
+      this.showMenuOnResize = $event.target.innerWidth < 1000 ? true : false;
+  }
+
  @ViewChild(MatMenuTrigger,{static: false}) menu: MatMenuTrigger;
 
   dropdownMenu = [
@@ -58,9 +65,13 @@ export class HeaderComponent implements OnInit {
   
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   closeMenu() {
     this.menu.closeMenu();
+  }
+
+  menuClicked() {
+    this.showMenu = !this.showMenu;
   }
 }

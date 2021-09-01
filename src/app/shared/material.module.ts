@@ -6,6 +6,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -13,7 +14,8 @@ const MATERIAL_MODULES = [
   MatMenuModule,
   MatBadgeModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatToolbarModule
 ]
 
 @NgModule({

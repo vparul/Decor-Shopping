@@ -55,3 +55,11 @@ header {
     cursor: pointer;
   }
 }
+.toolbar {
+  img {
+    max-width: 100px;
+  }
+  .icons-container {
+    flex-basis: 10%;
+  }  
+}

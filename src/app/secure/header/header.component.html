@@ -1,32 +1,67 @@
-<header class="flex column justify-between items-center">
-    <section class="flex justify-between items-center w-100"></section>
-    <section class="navbar-container flex">
-        <img src="../../../assets/images/logo.png" class="logo" />
-        <div class="flex items-center justify-between w-100 options">
-            <div class="flex items-center justify-center w-100">
-                <ng-container *ngFor="let menuItem of dropdownMenu">
-                    <button *ngIf="menuItem.subMenu.list.length" mat-icon-button [matMenuTriggerFor]="menu"
-                        #trigger="matMenuTrigger" (mouseover)="trigger.openMenu()">
-                        {{ menuItem.title }}
-                    </button>
-                    <mat-menu #menu="matMenu">
-                        <button *ngFor="let item of menuItem.subMenu.list" mat-menu-item class="dropdown-option">
-                            <span>{{ item }}</span>
-                        </button>
-                    </mat-menu>
+<header class="flex column justify-between items-center" *ngIf="!showMenuOnResize">
+  <section class="navbar-container flex">
+    <img src="../../../assets/images/logo.png" class="logo" />
+    <div class="flex items-center justify-between w-100 options">
+      <div class="flex items-center justify-center w-100">
+        <ng-container *ngFor="let menuItem of dropdownMenu">
+          <button
+            *ngIf="menuItem.subMenu.list.length"
+            mat-icon-button
+          >
+            {{ menuItem.title }}
+          </button>
+          <!-- <mat-menu #menu="matMenu">
+            <button
+              *ngFor="let item of menuItem.subMenu.list"
+              mat-menu-item
+              class="dropdown-option"
+            >
+              <span>{{ item }}</span>
+            </button>
+          </mat-menu> -->
 
-                    <button *ngIf="!menuItem.subMenu.list.length" mat-icon-button>
-                        {{ menuItem.title }}
-                    </button>
-                    
-                </ng-container>
-            </div>
-        </div>
+          <button *ngIf="!menuItem.subMenu.list.length" mat-icon-button>
+            {{ menuItem.title }}
+          </button>
+        </ng-container>
+      </div>
+    </div>
 
-        <div class="icons-container flex flex-1 items-center justify-between">
-            <i class="fa fa-search"></i>
-            <i class="fa fa-user"></i>
-            <i class="fa fa-shopping-cart" matBadge="0" matBadgeOverlap="false"></i>
-        </div>
-    </section>
+    <div class="icons-container flex flex-1 items-center justify-between">
+      <i class="fa fa-search pl-1"></i>
+      <i class="fa fa-user pl-1"></i>
+      <i class="fa fa-shopping-cart pl-1" matBadge="0" matBadgeOverlap="false"></i>
+    </div>
+  </section>
 </header>
+
+<mat-toolbar class="toolbar flex">
+  <mat-icon (click)="menuClicked()" class="cursor-pointer">menu</mat-icon>
+  <div class="flex items-center justify-between flex-1">
+    <img src="../../../assets/images/logo.png" class="pl-2" />
+    <div class="flex items-center justify-between icons-container pr-2">
+      <i class="fa fa-search cursor-pointer pl-1"></i>
+      <i class="fa fa-user cursor-pointer pl-1"></i>
+      <i
+        class="fa fa-shopping-cart cursor-pointer pl-1"
+        matBadge="0"
+        matBadgeOverlap="false"
+      ></i>
+    </div>
+  </div>
+</mat-toolbar>
+
+<section *ngIf="showMenuOnResize">
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    ></button>
+    <ng-container *ngIf="showMenu">
+        <mat-toolbar-row *ngFor="let menuItem of dropdownMenu">
+            <span class="cursor-pointer">{{ menuItem.title }}</span>
+          </mat-toolbar-row>
+    </ng-container>
+  </mat-toolbar>
+</section>
